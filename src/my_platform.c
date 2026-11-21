@@ -176,7 +176,7 @@ static void my_platform_on_init_complete(void) {
     // uni_bt_del_keys_unsafe();
 
     // Arrancar el vigia (freno automatico + LED)
-    btstack_run_loop_set_handler(&s_vigia, vigia_handler);
+    btstack_run_loop_set_timer_handler(&s_vigia, vigia_handler);
     btstack_run_loop_set_timer(&s_vigia, 100);
     btstack_run_loop_add_timer(&s_vigia);
 }
