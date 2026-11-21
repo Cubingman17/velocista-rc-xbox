@@ -26,7 +26,10 @@ jobs:
           git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/raspberrypi/pico-sdk.git pico-sdk
 
       - name: Poner el firmware del velocista encima del ejemplo
-        run: cp src/main.c src/my_platform.c bluepad32/examples/pico_w/src/
+        run: |
+          cp src/main.c src/my_platform.c bluepad32/examples/pico_w/src/
+          # el firmware usa hardware/pwm.h para los DRV8833: hay que enlazarlo
+          echo 'target_link_libraries(bluepad32_picow_example_app PRIVATE hardware_pwm hardware_clocks)' >> bluepad32/examples/pico_w/CMakeLists.txt
 
       - name: Compilar (Pico 2 W)
         run: |

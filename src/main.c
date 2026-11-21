@@ -1,8 +1,8 @@
-# ============================================================
-#  VELOCISTA RC - carro controlado con mando Xbox por Bluetooth
-#  Firmware para la Pico 2 W del velocista (campeon Pascual Bravo)
-#  Basado en el ejemplo de Bluepad32 para Pico W (Public Domain)
-# ============================================================
+/* ============================================================
+ *  VELOCISTA RC - carro controlado con mando Xbox por Bluetooth
+ *  Firmware para la Pico 2 W del velocista (campeon Pascual Bravo)
+ *  Basado en el ejemplo de Bluepad32 para Pico W (Public Domain)
+ * ============================================================ */
 
 #include <btstack_run_loop.h>
 #include <pico/cyw43_arch.h>
